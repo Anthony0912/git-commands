@@ -76,23 +76,32 @@
     git reset --hard <hash commit> -> Desace los cambios forzadamente
     git commit -m "Title" -m "Description"
     ```
-
+- ## GIT RABASE
+    ```
+    git rebase <rama> -> Actualiza el punto inicial de la rama
+    git rebase -i <HEAD~4> -> Obtiene los ultimos 4 commits
+    ```
 - ## GIT COMANDOS GENARALES
 
     ```
-    git diff  o git diff --staged ->ver modificaciones
+    git diff o git diff --staged ->ver modificaciones
     git checkout -- . -> Recostruya el proyecto a como estaba el ultimo commit
     git reset <nombre-archivo> -> Remueve el archivo que no queremos subir al repositorio
     git branch -> rama en la que te encuentras
     git branch experimental-> crear rama
     git show-branch -> descripcion detallada de las ramas
     git checkout experimental-> pasar de una rama a otra
-    git checkout -b otrarama -> crear una rama nueva y moverte a ella en un único paso.
+    git checkout -b <rama> -> crear una rama nueva y moverte a ella en un único paso.
     git merge experimental -> permite fusionarla con la rama
-    git merge experimental -m 'Esto es un merge con mensaje'
-    git branch -d rama_a_borrar -> Borrado de la rama en local
-    git branch -D rama_a_borrar ->forzar el borrado de la rama
-    git push origin --delete rama_a_borrar -> Eliminar un branch en remoto
+    git merge experimental -m <descripcion>
+    git branch -d <rama> -> Borrado de la rama en local
+    git branch -D <rama> ->forzar el borrado de la rama
+    git push origin --delete <rama> -> Eliminar un branch en remoto
     git mv <nombre archivo original> <ruta (se puede cambiar el nombre)> -> Funciona para mover archivos a otra ruta
     git rm <nombre del archivo> -> remueve el archivo
+    ```
+
+- ## GIT ISSUES
+    ```
+    git commit -am "Fixed #1: <descripcion>" -> Git hub detecta el issue abierto al escribir "Fixed #1"
     ```
