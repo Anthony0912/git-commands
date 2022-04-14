@@ -49,13 +49,13 @@
 
 - ## GIT TAGS
     ```
-    git tag -d 
     git tag v0.0.1 -m "Esta es la versión inicial"
     git tag
     git show v0.0.2
-    git push origin/master --tag
     git tag -a v4.2 -m "version" -> agregar tag un commit
+    git push origin/master --tag
     git tag -a v28 hascommit -m "<descripcion>"
+    git tag -d v0.0.1 -> Eliminar tag local
     git push origin :refs/tags/v<verision> -> Elimina tag remoto
     ```
 
