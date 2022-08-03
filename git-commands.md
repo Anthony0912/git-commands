@@ -62,7 +62,7 @@
 
 - ## GIT ELIMINAR RAMAS
     ```
-    git branch -d ACM-F06
+    git branch -D ACM-F06
     git push origin :ACM-F06
     git fetch -p (es para actualizar y ver qué ramas ya se borraron)
     ```
