@@ -17,22 +17,18 @@
 
     #### 1. GLOBAL
     ```
+    git config --list
     git config --global alias.s status -sb -> Agregar alias
     git config --global -e -> Ver configuracion global de git
     git config --global user.name "FIRST_NAME LAST_NAME"
     git config --global user.email "MY_NAME@example.com"
-    git config --list
-    git config --global user.name
-    git config --global user.email
     git config --global init.defaultBranch main -> Cambiar nombre de la rama principal
     git config --global alias.lg log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     ```
     #### 2. CONFIGURACION POR PROYECTO
     ```
     git config user.name "FIRST_NAME LAST_NAME"
-    git config  user.email "MY_NAME@example.com"
-    git config user.name
-    git config user.email
+    git config user.email "MY_NAME@example.com"
     ```
 
 - ## GIT STASH
@@ -50,32 +46,32 @@
 
 - ## GIT TAGS
     ```
-    git tag v0.0.1 -m "Esta es la versión inicial"
     git tag
-    git show v0.0.2
-    git tag -a v4.2 -m "version" -> agregar tag un commit
+    git tag -a v4.2 -m "version" -> Agregar tag un commit
     git push origin/master --tag
-    git tag -a v28 hascommit -m "<descripcion>"
     git tag -d v0.0.1 -> Eliminar tag local
     git push origin :refs/tags/v<verision> -> Elimina tag remoto
+    git tag v0.0.1 -m "Esta es la versión inicial"
+    git show v0.0.2
+    git tag -a v28 hascommit -m "<descripcion>"
     ```
 
 - ## GIT ELIMINAR RAMAS
     ```
     git branch -d ACM-F06
     git push origin :ACM-F06
-    git fetch -p (es para actualizar y ver qué ramas ya se borraron)
+    git fetch -p -> Actualiza las ramas ya se borraron en local
     ```
 
 - ## GIT COMMIT
     ```
-    git pull origin development->baja cambios de la misma rama o otra rama
-    git commit --amend -m "" -> Actualiza el mensaje del ultimo commit 
-    git reset --soft (HEAD^) (HASH) (numero commit)-> Vuelve al utilmo commit o cualquiera
     git commit -am "commit" -> solo cuando se da seguimiento a los archivos
-    git reflog -> Muestra de forma cronologica los commits realizados
-    git reset --hard <hash commit> -> Desace los cambios forzadamente
     git commit -m "Title" -m "Description"
+    git commit --amend -m "" -> Actualiza el mensaje del ultimo commit 
+    git pull origin development->baja cambios de la misma rama o otra rama
+    git reflog -> Muestra de forma cronologica los commits realizados
+    git reset --soft (HEAD^) (HASH) (numero commit)-> Vuelve al utilmo commit o cualquiera
+    git reset --hard <hash commit> -> Desace los cambios forzadamente
     ```
 - ## GIT RABASE
     ```
@@ -96,7 +92,7 @@
     git merge experimental -> permite fusionarla con la rama
     git merge experimental -m <descripcion>
     git branch -d <rama> -> Borrado de la rama en local
-    git branch -D <rama> ->forzar el borrado de la rama
+    git branch -D <rama> -> Forzar el borrado de la rama
     git push origin --delete <rama> -> Eliminar un branch en remoto
     git mv <nombre archivo original> <ruta (se puede cambiar el nombre)> -> Funciona para mover archivos a otra ruta
     git rm <nombre del archivo> -> remueve el archivo
